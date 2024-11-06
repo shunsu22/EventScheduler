@@ -14,17 +14,17 @@ chatGptに提案してもらったリアルタイムイベントスケジュー�
 
 ###API構成（Spring Boot）
 
-	•	イベント管理
-		•	GET /api/events - 全イベントの取得
-		•	POST /api/events - 新しいイベントを作成
-		•	PUT /api/events/{id} - 指定したIDのイベントを更新
-		•	DELETE /api/events/{id} - 指定したIDのイベントを削除
-	•	参加状況管理
-		•	POST /api/events/{id}/join - イベントに参加
-		•	POST /api/events/{id}/leave - イベントの不参加
-	•	コメント管理
-		•	POST /api/events/{id}/comments - コメントの追加
-		•	DELETE /api/comments/{id} - 指定したIDのコメントを削除
+	•イベント管理
+		•GET /api/events - 全イベントの取得
+		•POST /api/events - 新しいイベントを作成
+		•PUT /api/events/{id} - 指定したIDのイベントを更新
+		•DELETE /api/events/{id} - 指定したIDのイベントを削除
+	•参加状況管理
+		•POST /api/events/{id}/join - イベントに参加
+		•POST /api/events/{id}/leave - イベントの不参加
+	•コメント管理
+		•POST /api/events/{id}/comments - コメントの追加
+		•DELETE /api/comments/{id} - 指定したIDのコメントを削除
 
 フロントエンド（JavaScript + HTML + CSS）
 
