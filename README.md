@@ -12,18 +12,26 @@ chatGptに提案してもらったリアルタイムイベントスケジュー�
 	4.	カレンダー表示：月ごと、週ごと、日ごとにイベントをカレンダー形式で表示。
 	5.	通知機能：イベントの開始時刻が近づくと参加者に通知を表示。
 
- ###API構成
- 	•	イベント管理
-        GET /api/events - 全イベントの取得
-	POST /api/events - 新しいイベントを作成
-	PUT /api/events/{id} - 指定したIDのイベントを更新
-	DELETE /api/events/{id} - 指定したIDのイベントを削除
+###API構成（Spring Boot）
+
+	•	イベント管理
+		•	GET /api/events - 全イベントの取得
+		•	POST /api/events - 新しいイベントを作成
+		•	PUT /api/events/{id} - 指定したIDのイベントを更新
+		•	DELETE /api/events/{id} - 指定したIDのイベントを削除
 	•	参加状況管理
-	POST /api/events/{id}/join - イベントに参加
-	POST /api/events/{id}/leave - イベントの不参加
+		•	POST /api/events/{id}/join - イベントに参加
+		•	POST /api/events/{id}/leave - イベントの不参加
 	•	コメント管理
-	POST /api/events/{id}/comments - コメントの追加
-	DELETE /api/comments/{id} - 指定したIDのコメントを削除
+		•	POST /api/events/{id}/comments - コメントの追加
+		•	DELETE /api/comments/{id} - 指定したIDのコメントを削除
+
+フロントエンド（JavaScript + HTML + CSS）
+
+JavaScriptでリアルタイム通信を行い、イベントやコメントを非同期で更新。
+	•	イベントカレンダー画面：月、週、日ごとにイベントをカレンダー形式で表示し、クリックでイベント詳細へ移動。
+	•	イベント詳細画面：イベント情報と参加状況、コメントを表示・更新。参加/不参加の切り替えも可能。
+	•	コメント表示エリア：リアルタイムで他のユーザーのコメントが反映され、イベントごとに簡単に情報共有が可能。
 
  技術構成
 
